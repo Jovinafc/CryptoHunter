@@ -4,7 +4,8 @@ import { TrendingCoins } from '../../config/api';
 import { CryptoState } from '../../CryptoContext';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import AliceCarousel from 'react-alice-carousel';
+//import AliceCarousel from 'react-alice-carousel';
+import { AnimatedCarousel } from './AnimatedCarousel';
 
 const useStyles = makeStyles((theme) => ({
   carousel: {
@@ -37,7 +38,6 @@ const Carousel = () => {
     setTrending(data);
   };
 
-  console.log(trending);
   useEffect(() => {
     fetchTrendingCoins();
   }, [currency]);
@@ -84,7 +84,18 @@ const Carousel = () => {
 
   return (
     <div className={classes.carousel}>
-      <AliceCarousel
+      {/* <AliceCarousel
+        mouseTracking
+        infinite
+        autoPlayInterval={1000}
+        animationDuration={1500}
+        disableDotsControls
+        disableButtonControls
+        responsive={responsive}
+        autoPlay
+        items={items}
+      /> */}
+      <AnimatedCarousel
         mouseTracking
         infinite
         autoPlayInterval={1000}

@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-// import Homepage from './Pages/Homepage';
-// import Coinpage from './Pages/Coinpage';
+//import Homepage from './Pages/Homepage';
+//import Coinpage from './Pages/Coinpage';
 import { makeStyles } from '@material-ui/core';
 import { lazy, Suspense } from 'react';
 

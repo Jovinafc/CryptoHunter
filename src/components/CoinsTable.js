@@ -53,7 +53,6 @@ const CoinsTable = () => {
   });
 
   const handleSearch = () => {
-    console.log('In');
     return coins.filter(
       (coin) =>
         coin.name.toLowerCase().includes(search) ||
@@ -128,7 +127,6 @@ const CoinsTable = () => {
                   .slice((page - 1) * 10, (page - 1) * 10 + 10)
                   .map((row) => {
                     const profit = row.price_change_percentage_24h > 0;
-                    console.log(row);
                     return (
                       <TableRow
                         // onClick={() => history.push(`/coins/${row.id}`)}
